@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="user-service" />
         <module name="book-service" />
+        <module name="eureka-server" />
         <module name="commons" />
         <module name="borrow-service" />
       </profile>
@@ -17,6 +18,7 @@
       <module name="book-service" target="14" />
       <module name="borrow-service" target="14" />
       <module name="commons" target="14" />
+      <module name="eureka-server" target="14" />
       <module name="SpringCloudStudy" target="1.8" />
       <module name="user-service" target="14" />
     </bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="book-service" options="-parameters" />
       <module name="borrow-service" options="-parameters" />
       <module name="commons" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
