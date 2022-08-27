@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gatewat-service" />
+        <module name="config-service" />
         <module name="book-service" />
         <module name="borrow-service" />
         <module name="hystrix-dashboard" />
@@ -20,6 +21,7 @@
       <module name="book-service" target="14" />
       <module name="borrow-service" target="14" />
       <module name="commons" target="14" />
+      <module name="config-service" target="14" />
       <module name="eureka-server" target="14" />
       <module name="gatewat-service" target="14" />
       <module name="hystrix-dashboard" target="14" />
@@ -33,6 +35,7 @@
       <module name="book-service" options="-parameters" />
       <module name="borrow-service" options="-parameters" />
       <module name="commons" options="-parameters" />
+      <module name="config-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="gatewat-service" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
