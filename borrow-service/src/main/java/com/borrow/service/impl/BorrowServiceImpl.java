@@ -3,6 +3,8 @@ package com.borrow.service.impl;
 import com.borrow.entity.UserBorrowDetail;
 import com.borrow.mapper.BorrowMapper;
 import com.borrow.service.BorrowService;
+import com.borrow.service.client.BookClient;
+import com.borrow.service.client.UserClient;
 import com.entity.Book;
 import com.entity.Borrow;
 import com.entity.User;
@@ -18,17 +20,19 @@ public class BorrowServiceImpl implements BorrowService {
     @Resource
     BorrowMapper borrowMapper;
     @Resource
-    RestTemplate template;
+    UserClient userClient;
+    @Resource
+    BookClient bookClient;
 
     @Override
     public UserBorrowDetail getUserBorrowDetailByUid(Integer uid) {
 
         List<Borrow> borrow = borrowMapper.getBorrowByUid(uid);
 
-        User user = template.getForObject("http://userservice/user/" + uid, User.class);
+        User user = userClient.findUserById(uid);
         List<Book> bookList = borrow
                 .stream()
-                .map(b -> template.getForObject("http://bookservice/book/" + b.getBid(), Book.class))
+                .map(b -> bookClient.findBookById(b.getBid()))
                 .collect(Collectors.toList());
 
         return new UserBorrowDetail(user, bookList);
