@@ -12,6 +12,7 @@
         <module name="eureka-server" />
         <module name="commons" />
         <module name="borrow-service" />
+        <module name="hystrix-dashboard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="borrow-service" target="14" />
       <module name="commons" target="14" />
       <module name="eureka-server" target="14" />
+      <module name="hystrix-dashboard" target="14" />
       <module name="SpringCloudStudy" target="1.8" />
       <module name="user-service" target="14" />
     </bytecodeTargetLevel>
@@ -30,6 +32,7 @@
       <module name="borrow-service" options="-parameters" />
       <module name="commons" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
